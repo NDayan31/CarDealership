@@ -1,7 +1,6 @@
 package com.dealerships;
 
 import java.io.*;
-import java.util.ArrayList;
 
 public class DealershipFileManager {
 
@@ -20,7 +19,7 @@ public class DealershipFileManager {
                 String phoneNumber = getDealershipInfo[2];
 
                 Dealership dealership = new Dealership(name, address, phoneNumber);
-                
+
             if (lineNumber != 1) {
                 String[] getInventoryInfo = line.split("\\|");
 
