@@ -85,22 +85,48 @@ public class UserInterface {
         }
     }
         public void processGetByPriceRequest () {
-
+            System.out.print("Enter minimum amount: ");
+            double min = input.nextDouble();
+            System.out.print(" Enter maximum amount: ");
+            double max = input.nextDouble();
+            displayListHeader();
+            displayVehicle(dealership.getVehicleByPrice(min, max));
         }
         public void processGetByMakeModelRequest () {
-
+            System.out.print("Enter a Make: ");
+            String make = input.nextLine();
+            System.out.print("Enter a Model: ");
+            String model = input.nextLine();
+            displayListHeader();
+            displayVehicle(dealership.getVehicleByMakeModel(make, model));
         }
         public void processGetByYearRequest () {
-
+            System.out.print("Enter oldest year: ");
+            int min = input.nextInt();
+            System.out.print("Enter newest year: ");
+            int max = input.nextInt();
+            displayListHeader();
+            displayVehicle(dealership.getVehicleByYear(min, max));
         }
         public void processGetByColorRequest () {
-
+            System.out.print("Enter color: ");
+            String color = input.nextLine();
+            displayListHeader();
+            displayVehicle(dealership.getVehicleByColor(color));
         }
         public void processGetByMileageRequest () {
-
+            System.out.print("Enter minimum mileage: ");
+            int min = input.nextInt();
+            System.out.print("Enter maximum mileage: ");
+            int max = input.nextInt();
+            displayListHeader();
+            displayVehicle(dealership.getVehicleByMiles(min, max));
         }
         public void processGetByVehicleTypeRequest () {
-
+            System.out.print("Enter vehicle type: ");
+            String vehicleType = input.nextLine();
+            displayListHeader();
+            displayVehicle(dealership.getVehiclesByType(vehicleType));
         }
         public void processGetAllVehicleRequest () {
             displayListHeader();
