@@ -87,13 +87,14 @@ public class UserInterface {
         public void processGetByPriceRequest () {
             System.out.print("Enter minimum amount: ");
             double min = input.nextDouble();
-            System.out.print(" Enter maximum amount: ");
+            System.out.print("Enter maximum amount: ");
             double max = input.nextDouble();
             displayListHeader();
             displayVehicle(dealership.getVehicleByPrice(min, max));
         }
         public void processGetByMakeModelRequest () {
             System.out.print("Enter a Make: ");
+            input.nextLine();
             String make = input.nextLine();
             System.out.print("Enter a Model: ");
             String model = input.nextLine();
@@ -110,6 +111,7 @@ public class UserInterface {
         }
         public void processGetByColorRequest () {
             System.out.print("Enter color: ");
+            input.nextLine();
             String color = input.nextLine();
             displayListHeader();
             displayVehicle(dealership.getVehicleByColor(color));
@@ -124,6 +126,7 @@ public class UserInterface {
         }
         public void processGetByVehicleTypeRequest () {
             System.out.print("Enter vehicle type: ");
+            input.nextLine();
             String vehicleType = input.nextLine();
             displayListHeader();
             displayVehicle(dealership.getVehiclesByType(vehicleType));
