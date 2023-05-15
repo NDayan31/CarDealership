@@ -29,8 +29,12 @@ public class Dealership {
     public List<Vehicle> getVehicleByColor (String color) {
         return null;
     }
-    public List<Vehicle> getVehicleByMiles (int min, int max) {return null;}
-    public List<Vehicle> getVehiclesByType (String vehicleType) {return null;}
+    public List<Vehicle> getVehicleByMiles (int min, int max) {
+        return null;
+    }
+    public List<Vehicle> getVehiclesByType (String vehicleType) {
+        return null;
+    }
     public List<Vehicle> getAllVehicles () {
         return inventory;
     }
