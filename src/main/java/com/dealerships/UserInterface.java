@@ -140,8 +140,10 @@ public class UserInterface {
             //String format vin|year|Make|Model|Type|color|odo|price
             System.out.print("Enter the last 6 of the VIN: ");
             int vin = input.nextInt();
+            input.nextLine();
             System.out.print("Enter the year: ");
             int year = input.nextInt();
+            input.nextLine();
             System.out.print("Enter vehicle make: ");
             String make = input.nextLine();
             System.out.print("Enter vehicle model: ");
@@ -158,12 +160,24 @@ public class UserInterface {
 
             Vehicle vehicle = new Vehicle(vin,year,make,model,vehicleType,color,odometer,price);
             dealership.addVehicle(vehicle);
+            DealershipFileManager dealershipFileManager = new DealershipFileManager();
+            dealershipFileManager.saveDealership(dealership);
         }
         public void processRemoveVehicleRequest () {
             System.out.print("Which vehicle would you like to remove?\nEnter the last 6 of the VIN: ");
             int vin = input.nextInt();
+            input.nextLine();
+            for (Vehicle vehicle : dealership.getAllVehicles()){
+                if (vehicle.getVin() == vin){
+                    System.out.printf("%d: %d %s %s had been removed.",
+                            vehicle.getVin(),vehicle.getYear(),vehicle.getMake(),vehicle.getModel());
+                    dealership.removeVehicle(vehicle);
+                    break;
+                }
+            }
+            DealershipFileManager dealershipFileManager = new DealershipFileManager();
+            dealershipFileManager.saveDealership(dealership);
 
-            dealership.removeVehicle(vin);
         }
 
 }

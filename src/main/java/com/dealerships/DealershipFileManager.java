@@ -22,7 +22,7 @@ public class DealershipFileManager {
 
                     dealership = new Dealership(name, address, phoneNumber);
 
-                }else {
+                } else {
                     String[] getInventoryInfo = line.split("\\|");
 
                     // vin|year|Make|Model|Type|color|odo|price
@@ -41,19 +41,26 @@ public class DealershipFileManager {
                 lineNumber++;
             }
             bfr.close();
-
         } catch (IOException e) {
             System.out.println("Error");
         }
-
         return dealership;
-
     }
     public void saveDealership (Dealership vehicles) {
-        /*try {
+        try {
+            BufferedWriter bfw = new BufferedWriter(new FileWriter(fileName));
 
-        } catch (IOException e) {
+            bfw.write(vehicles.toString());
+            bfw.newLine();
+
+            for (int i = 0; i < vehicles.getAllVehicles().size(); i++) {
+                bfw.write(String.valueOf(vehicles.getAllVehicles().get(i)));
+                bfw.newLine();
+            }
+
+            bfw.close();
+        } catch (IOException e){
             System.out.println("Error");
-        }*/
+        }
     }
 }

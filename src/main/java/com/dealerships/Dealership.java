@@ -90,17 +90,9 @@ public class Dealership {
     public void addVehicle (Vehicle vehicle){
         inventory.add(vehicle);
     }
-    public void removeVehicle (int vin){
-        int i = 0;
-        for (Vehicle vehicle : inventory) {
-            if (vin == vehicle.getVin()){
-                inventory.remove(i);
-                System.out.printf("%d: %d %s %s has been removed from the inventory.",
-                        vehicle.getVin(), vehicle.getYear(), vehicle.getMake(), vehicle.getModel());
-            }
-            i++;
+    public void removeVehicle (Vehicle vehicle){
+        inventory.remove(vehicle);
         }
-    }
     public String getName() {
         return name;
     }
