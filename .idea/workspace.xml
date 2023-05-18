@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="584043c3-a5cb-42fc-be47-6807c69e525a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DealershipInventory.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DealershipInventory.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dealerships/Dealership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dealerships/Dealership.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dealerships/DealershipFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dealerships/DealershipFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dealerships/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dealerships/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +32,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/nadavdayan/Desktop/YearUp/Pluralsight/Week 5 Project/CarDealership"
   }
 }]]></component>
   <component name="RunManager">
